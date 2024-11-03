@@ -14,7 +14,7 @@ def calculate_gpa(filename):
     with open(filename, 'r') as file:
         lines = file.readlines()
         for line in lines[1:]:
-            course, grade, credits = line.strip("|").split()
+            course, grade, credits = line.strip().split("|")
             credits = int(credits)
 
             if grade == 'A+':
